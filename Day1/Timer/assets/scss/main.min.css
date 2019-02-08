@@ -1,0 +1,1 @@
+body{font-family:"Helvetica",sans-serif}.app{display:flex;width:100vw;height:100vh;justify-content:center;align-items:center;flex-direction:column}.timer{padding:15px;background:#171717;color:#F3F3F3;border-radius:8px 8px 0px 0px;width:150px;text-align:center}.buttons{padding:15px;width:150px;background:#F3F3F3;border-radius:0px 0px 8px 8px;text-align:center}
