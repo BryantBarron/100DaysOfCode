@@ -5,7 +5,7 @@ let operation = " ";
 let pi = "";
 let num = " ";
 let decimal = true;
-let negative = 0; 
+
 for(let i = 0; i < buttons.length; i++){
     let button = buttons[i];
     
@@ -29,11 +29,6 @@ for(let i = 0; i < buttons.length; i++){
             }
             num = " ";
             decimal = true;
-        }else if(button.classList.contains("pi")){
-            pi += button.dataset.value;
-            operation += pi;
-            display.innerHTML = eval(pi).toFixed(8);
-            num = " ";
         }else if(button.classList.contains("backspace")){
             operation = operation.slice(0, -1);
             display.innerHTML = operation;
@@ -46,7 +41,14 @@ for(let i = 0; i < buttons.length; i++){
         }else if(button.classList.contains("decimal")){
             hasDecimal(button);
         }else if(button.classList.contains("negative")){
-           
+            if(operation.charAt(0)== '-'){
+                operation = operation.substr(1);
+                display.innerHTML = operation;
+            }else{
+                let negative = '-';
+                operation = negative + operation;
+                display.innerHTML = operation;  
+            }
         }
     }); 
 }
